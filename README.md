@@ -65,7 +65,7 @@ Designed a **Star Schema** data model to enable cross-filtering between Operatio
 
 ### 1. Executive Compliance Overview
 *A high-level health check of the UK Tax System designed for the CFO.*
-![Compliance Dashboard](Screenshots/1.Executive_Compliance_Overview.png)
+![Compliance Dashboard](Screenshot/1.Executive_Compliance_Overview.png)
 *   **KPI Cards:** Immediate visibility on the £3bn Surplus Gap and 113.5% Collection Rate.
 *   **Income Band Heatmap (Table):** Used data bars to visually highlight that the bulk of revenue flows from the lower-income bands (<£50k), whereas High Net Worth Individuals (100k+) have a lower collection volume.
 *   **High Risk Debt by Sector (Bar Chart):** Clearly identifies **Construction** and **Hospitality** as the sectors with the highest exposure to high-risk debt, signaling where audit resources should be focused.
