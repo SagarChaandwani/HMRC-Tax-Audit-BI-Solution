@@ -72,7 +72,7 @@ Designed a **Star Schema** data model to enable cross-filtering between Operatio
 
 ### 2. Operation & Customer Experience
 *Diagnosing the root cause of the low 50% CSAT score.*
-![Operations Dashboard](Screenshots/2_Operations_CX.png)
+![Operations Dashboard](Screenshot/2.Operation_&_Customer_Experience.png)
 *   **Call Volume Analysis (Donut Chart):** The most critical insight on the page. It reveals that **39.9%** of calls are for "Penalty Appeals." This is a process that could be automated.
 *   **Wait Time Trends (Line Chart):** Shows cyclical spikes in wait times, correlating with filing deadlines (Jan/Feb). This helps Workforce Planning schedule staff more effectively.
 *   **CSAT by Channel (Bar Chart):** Shows that "Phone" remains the dominant channel despite having lower satisfaction than digital channels.
