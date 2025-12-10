@@ -79,7 +79,7 @@ Designed a **Star Schema** data model to enable cross-filtering between Operatio
 
 ### 3. Risk & Audit Intelligence
 *An interactive "Workbench" for the Internal Audit team.*
-![Risk Dashboard](Screenshots/3_Risk_Audit.png)
+![Risk Dashboard](Screenshot/3.Risk_&_Audit.png)
 *   **Risk Matrix (Scatter Plot):** Plots `Audit Risk Score` (Y-Axis) vs `Tax Gap` (X-Axis). Using quadrant analysis, auditors can spot outliers (High Score + High Gap) immediately.
 *   **Decomposition Tree:** Allows the user to drill down into the £1.3bn High Risk Debt by Region -> Sector -> Filing Method to find the root cause.
 *   **Top 50 Target List (Table):** A generated "Hit List" of specific Taxpayer IDs that require immediate investigation, sorted by Risk Score.
