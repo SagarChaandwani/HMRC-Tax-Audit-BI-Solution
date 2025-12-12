@@ -7,7 +7,8 @@
 ![Status](https://img.shields.io/badge/Status-Complete-success?style=for-the-badge)
 
 ## 📖 Client Background & Context
-**Client:** HM Revenue & Customs (HMRC) | **Sector:** Public Sector / Taxation
+
+HMRC (Her Majesty's Revenue and Customs) is the UK government department responsible for the administration and collection of taxes, duties, and National Insurance. They play a critical role in funding public services and enforcing financial compliance for millions of individuals and businesses across the nation.
 
 **The Scenario:**
 HMRC is the UK’s tax, payments, and customs authority. Its primary purpose is to collect the money that pays for the UK’s public services and help families and individuals with targeted financial support. The organization faces a dual challenge: closing the "Tax Gap" (difference between tax due and collected) while modernizing customer service to reduce administrative costs.
@@ -103,38 +104,25 @@ Designed a **Star Schema** data model to enable cross-filtering between Operatio
 
 ---
 
+🧠 Assumptions & Future Scope
+Assumptions:
+Negative Tax Gap: The data shows a surplus (Negative Gap). It is assumed this includes the recovery of debts from previous financial years.
+CSAT Scale: Assumed CSAT is an aggregate score out of 100 based on the raw data distribution.
+Future Scope:
+Sentiment Analysis: Integrate text analytics on "Call Topics" to understand specific "Form Confusion" pain points.
+Predictive Auditing: Use Python/Machine Learning to predict which Taxpayers in the "Retail" sector are most likely to underpay next quarter based on filing history.
+
+
+---
+
 ## 🛠 Technical Implementation & Expertise
 
 ### Data Cleaning (Power Query)
 *   **Wait Time Correction:** Raw data contained negative timestamps due to system logging errors (e.g., `-145 mins`). Used Power Query `Table.TransformColumns` with `Number.Abs` to clean these into positive values.
 *   **Risk Scoring:** Generated realistic Audit Risk Scores (1-100) using custom M-Code logic to replace placeholder sequential data.
 
-### Advanced DAX Measures
-I developed complex DAX measures to handle the specific logic requirements of the HMRC dataset.
+---
 
-**1. High Risk Debt Calculation**
-*Isolates debt only for taxpayers who have crossed the risk threshold.*
-```dax
-High Risk Debt = 
-CALCULATE(
-    [Tax Gap], 
-    FILTER('HMRC TAX_PAYER', 'HMRC TAX_PAYER'[AuditRiskScore] >= 70)
-)
-2. Digital Adoption Rate
-Calculates the percentage of filers using digital methods vs. paper.
-codeDax
-Digital Adoption % = 
-VAR DigitalCount = CALCULATE(COUNTROWS('HMRC FACT_FILING'), 'HMRC FACT_FILING'[FilingMethod] = "Digital")
-VAR TotalCount = COUNTROWS('HMRC FACT_FILING')
-RETURN DIVIDE(DigitalCount, TotalCount, 0)
-3. CSAT Normalization
-Converts raw scores (which were aggregated) into a clean percentage.
-codeDax
-CSAT % = [Avg CSAT Score] / 100
-4. Tax Gap (Surplus/Deficit)
-Dynamic calculation of the revenue variance.
-codeDax
-Tax Gap = SUM('HMRC TAXDUE/TAXPAID'[AmountDue]) - SUM('HMRC TAXDUE/TAXPAID'[AmountPaid])
 
 📚 Data Dictionary
 Table
@@ -160,10 +148,4 @@ Tax Gap
 Calculated as AmountDue - AmountPaid. Negative values indicate surplus collection.
 
 
-🧠 Assumptions & Future Scope
-Assumptions:
-Negative Tax Gap: The data shows a surplus (Negative Gap). It is assumed this includes the recovery of debts from previous financial years.
-CSAT Scale: Assumed CSAT is an aggregate score out of 100 based on the raw data distribution.
-Future Scope:
-Sentiment Analysis: Integrate text analytics on "Call Topics" to understand specific "Form Confusion" pain points.
-Predictive Auditing: Use Python/Machine Learning to predict which Taxpayers in the "Retail" sector are most likely to underpay next quarter based on filing history.
+---
