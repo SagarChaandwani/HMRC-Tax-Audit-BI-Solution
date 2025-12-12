@@ -131,6 +131,7 @@ Predictive Auditing: Use Python/Machine Learning to predict which Taxpayers in t
 
 ---
 
+## Data Dictionary
 
 ### A reference guide to the core tables used in the Star Schema:
 
