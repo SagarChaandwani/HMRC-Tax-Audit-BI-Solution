@@ -111,7 +111,7 @@ Designed a **Star Schema** data model to enable cross-filtering between Operatio
 Negative Tax Gap: The data shows a surplus (Negative Gap). It is assumed this includes the recovery of debts from previous financial years.
 CSAT Scale: Assumed CSAT is an aggregate score out of 100 based on the raw data distribution.
 
-Future Scope:
+## Future Scope:
 Sentiment Analysis: Integrate text analytics on "Call Topics" to understand specific "Form Confusion" pain points.
 Predictive Auditing: Use Python/Machine Learning to predict which Taxpayers in the "Retail" sector are mo
 
@@ -126,17 +126,17 @@ Predictive Auditing: Use Python/Machine Learning to predict which Taxpayers in t
 ---
 
 
-### 📚 Data Dictionary
+### A reference guide to the core tables used in the Star Schema.
 
-📚 Data Dictionary
-A reference guide to the core tables used in the Star Schema.
-Table	Column	Description
-HMRC_TAX_PAYER	AuditRiskScore	Internal score (0-100) predicting likelihood of non-compliance.
-HMRC_TAX_PAYER	Sector	Industry classification (e.g., Construction, Retail).
-HMRC_FACT_FILING	PenaltyAmount	Financial penalty levied for late submissions.
-HMRC_FACT_OPERATION	Avg_Wait_Time	Time in minutes a customer waits in queue (Cleaned using ABS function).
-HMRC_FACT_OPERATION	CSAT_Score	Customer Satisfaction Score (Normalized to 0-100%).
-HMRC_TAXDUE/PAID	Tax_Gap	Calculated as AmountDue - AmountPaid. Negative values indicate surplus collection.
+| Table | Column | Description |
+| :--- | :--- | :--- |
+
+|**HMRC_TAX_PAYER**|	AuditRiskScore	| Internal score (0-100) predicting likelihood of non-compliance. |
+|**HMRC_TAX_PAYER**|	Sector	Industry classification (e.g., Construction, Retail). |
+|**HMRC_FACT_FILING**|	PenaltyAmount	Financial penalty levied for late submissions. |
+|**HMRC_FACT_OPERATION**|	Avg_Wait_Time	Time in minutes a customer waits in queue (Cleaned using ABS function). |
+|**HMRC_FACT_OPERATION**|	CSAT_Score	Customer Satisfaction Score (Normalized to 0-100%). |
+|**HMRC_TAXDUE/PAID**| Tax_Gap	Calculated as AmountDue - AmountPaid. Negative values indicate surplus collection. |
 
 
 ---
