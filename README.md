@@ -3,7 +3,6 @@
 # 🏛️ HMRC Strategic Performance Monitor
 ### Compliance, Audit & Operations Intelligence
 
-> **Disclaimer:** This is a personal portfolio project using a synthetic dataset. It is a simulation of real-world public sector challenges and is not affiliated with His Majesty's Revenue and Customs.
 
 | **Tech Stack** | **Methodology** | **Project Status** |
 |:---:|:---:|:---:|
@@ -12,6 +11,7 @@
 
 </div>
 
+> **Disclaimer:** This is a personal portfolio project using a synthetic dataset. It is a simulation of real-world public sector challenges and is not affiliated with His Majesty's Revenue and Customs.
 ---
 
 ## 📋 Mission Directive: Closing the Tax Gap
